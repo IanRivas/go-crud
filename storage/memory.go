@@ -36,7 +36,7 @@ func (m *Memory) Create(person *model.Person) error {
 
 // Update actualiza una persona en el slice de memory
 func (m *Memory) Update(ID int, person *model.Person) error {
-	if person != nil {
+	if person == nil {
 		return model.ErrPersonCanNotBeNil
 	}
 
