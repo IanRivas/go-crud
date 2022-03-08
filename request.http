@@ -1,6 +1,7 @@
+// Person
 POST http://localhost:8080/v1/persons/create
 content-type: application/json
-Authorization: un-token-muy-seguro
+Authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNvbnRhY3RvQGdtYWlsLmNvbSIsImV4cCI6MTY0Njc4Mzk0MiwiaXNzIjoiRWR0ZWFtIn0.dFuXz_vO4TaOtv8Q79Z_bbzYW338PMOqG3UJfgzU4EOf6ZhiTlTIebJlLWwllPA-BohJAxYLLhvO4UzRedDMjyGgKKfifPfnlEIgzh3eEYDRgaiza09AzgvpcDOEjTszrQYzbamfCFKirymZbD29oCCBeMHgPQoSdzU9Ak2d9uc
 
 {
     "name": "Ian Rivas",
@@ -28,3 +29,14 @@ content-type: application/json
 }
 ###
 DELETE http://localhost:8080/v1/persons/delete?id=1
+
+###
+
+// Login - con esto generas el token para el Post de Person
+POST http://localhost:8080/v1/login
+content-type: application/json
+
+{
+    "email": "contacto@gmail.com",
+    "password": "123456"
+}
