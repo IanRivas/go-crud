@@ -1,0 +1,29 @@
+POST http://localhost:8080/v1/persons/create
+content-type: application/json
+
+{
+    "name": "Ian Rivas",
+    "age": 27,
+    "communities": [
+        {"name": "platzi"},
+        {"name": "edteam"}
+    ]
+}
+
+###
+GET http://localhost:8080/v1/persons/get-all
+
+###
+PUT http://localhost:8080/v1/persons/update?id=1
+content-type: application/json
+
+{
+    "name": "Erick Rivas",
+    "age": 26,
+    "communities": [
+        {"name": "platzi"},
+        {"name": "edteam"}
+    ]
+}
+###
+DELETE http://localhost:8080/v1/persons/delete?id=1
